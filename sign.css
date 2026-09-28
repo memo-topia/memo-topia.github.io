@@ -1,1 +1,26 @@
 
+            body {
+                background-color: #1a1a1a;
+                
+            }
+            .login {
+                text-align: center;
+                margin: 0 auto;
+                width: min(400px, 90%);
+                background-color: white;
+                box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                padding-bottom: 30px;
+                padding-top: 10px;
+            }
+
+            .all {
+                display: flex;
+                align-items: center;
+                height: 100vh;
+            }
+
+            #ghost {
+                width: min(75px, 20%);
+                height: auto;
+            }
