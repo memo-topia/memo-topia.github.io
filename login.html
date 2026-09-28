@@ -7,8 +7,7 @@
 
             body {
                 background-color: #1a1a1a;
-                display: glid;
-                place-items: center;
+                
             }
             .login {
                 text-align: center;
@@ -20,9 +19,16 @@
                 padding-bottom: 30px;
                 padding-top: 10px;
             }
+
+            .all {
+                display: glid;
+                place-items: center;
+                height: 100vh;
+            }
         </style>
     </head>
     <body>
+        <div class="all">
         <div class="login">
             <h1>ログイン</h1>
             <label for="mail">メールアドレス: </label>
@@ -32,6 +38,7 @@
             <input type="password" id="pass" placeholder="パスワード">
             <p>アカウントを持っていない場合は: </p>
             <a href="signup.html">アカウント新規登録</a>
+        </div>
         </div>
     </body>
 </html>
