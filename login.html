@@ -16,13 +16,17 @@
                 background-color: white;
                 box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 1);
                 border-radius: 20px;
+                padding: 15px;
             }
         </style>
     </head>
     <body>
         <div class="login">
             <h1>ログイン</h1>
-            <input type="email" id="mail" placeholder="メールアドレス(例: test@example.com)">
+            <label for="mail">メールアドレス: </label>
+            <input type="email" id="mail" placeholder="(例: test@example.com)"><br>
+
+            <label for="pass">パスワード</label>
             <input type="password" id="pass" placeholder="パスワード">
         </div>
     </body>
