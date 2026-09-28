@@ -25,11 +25,17 @@
                 align-items: center;
                 height: 100vh;
             }
+
+            #ghost {
+                width: min(75px, 20%);
+                height: auto;
+            }
         </style>
     </head>
     <body>
         <div class="all">
         <div class="login">
+            <img src="ghost.png" id="ghost">
             <h1>ログイン</h1>
             <label for="mail">メールアドレス: </label>
             <input type="email" id="mail" placeholder="(例: test@example.com)"><br>
