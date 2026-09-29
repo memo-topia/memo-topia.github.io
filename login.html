@@ -22,7 +22,11 @@
         </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script>
+            const SUPABASE_URL = "https://cwvcpbgjxbyroqnsdctf.supabase.co"; 
+const SUPABASE_KEY = "sb_publishable_WTjtS8YZ2P4HYtUibp3l0Q_-LwJ5GJp";
+const client = window.supabase.createClient( SUPABASE_URL, SUPABASE_KEY );
 
             const mailInput = document.getElementById("mail");
             const passInput = document.getElementById("pass");
