@@ -45,8 +45,10 @@ const client = window.supabase.createClient( SUPABASE_URL, SUPABASE_KEY );
                      password: pass
 });
                 if (error) {
-                    return alert(error);
+                    return alert(error.message);
                 }
+
+                alert("アカウント作成に成功しました！");
             });
         </script>
 </body>
