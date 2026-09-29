@@ -20,5 +20,25 @@
             <a href="signup.html">アカウント新規登録</a>
         </div>
         </div>
-    </body>
+
+        <script>
+
+            const mailInput = docuemnt.getElementById("mail");
+            const passInput = docuemnt.getElementById("pass");
+            const mit = docuemnt.getElementById("mit");
+
+            mit.addEventListener("click", async () => {
+                const mail = mailInput.value;
+                const pass = passInput.value;
+
+                const { data, error } = await supabase.auth.signInWithPassword({
+                     email: mail,
+                     password: pass
+});
+                if (error) {
+                    return alert(error);
+                }
+            });
+        </script>
+</body>
 </html>
