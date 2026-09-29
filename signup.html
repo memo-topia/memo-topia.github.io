@@ -39,7 +39,7 @@ const client = window.supabase.createClient( SUPABASE_URL, SUPABASE_KEY );
                     return alert("メールアドレスとパスワードを入力してください。");
                 }
 
-                const { data, error } = await supabase.auth.signUp({
+                const { data, error } = await client.auth.signUp({
                      email: mail,
                      password: pass
 });
