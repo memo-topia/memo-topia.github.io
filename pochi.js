@@ -17,3 +17,9 @@ async function checkLogin() {
     }
 
     checkLogin();
+
+const logout = document.querySelector(".logout");
+logout.addEventListener("click", () => {
+        const { error } = await supabase.auth.signOut();
+        checkLogin();
+});
