@@ -24,13 +24,17 @@
 
         <script>
 
-            const mailInput = docuemnt.getElementById("mail");
-            const passInput = docuemnt.getElementById("pass");
-            const mit = docuemnt.getElementById("mit");
+            const mailInput = document.getElementById("mail");
+            const passInput = document.getElementById("pass");
+            const mit = document.getElementById("mit");
 
             mit.addEventListener("click", async () => {
                 const mail = mailInput.value;
                 const pass = passInput.value;
+
+                if (mail == "" || pass == "") {
+                    return alert("メールアドレスとパスワードを入力してください。");
+                }
 
                 const { data, error } = await supabase.auth.signInWithPassword({
                      email: mail,
