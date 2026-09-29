@@ -15,10 +15,29 @@
             <input type="email" id="mail" placeholder="(例: test@example.com)"><br>
 
             <label for="pass">パスワード: </label>
-            <input type="password" id="pass" placeholder="パスワード">
+            <input type="password" id="pass" placeholder="パスワード"><br>
+            <input type="submit" value="確定" id="mit">
             <p>アカウントを持っている場合は: </p>
             <a href="login.html">ログイン</a>
         </div>
         </div>
+        <script>
+            const mailInput = docuemnt.getElementById("mail");
+            const passInput = docuemnt.getElementById("pass");
+            const mit = docuemnt.getElementById("mit");
+
+            mit.addEventListener("click", () => {
+                const mail = mailInput.value;
+                const pass = passInput.value;
+
+                const { data, error } = await supabase.auth.signUp({
+                     email: mail,
+                     password: pass
+});
+                if (error) {
+                    return alert(error);
+                }
+            });
+        </script>
     </body>
 </html>
